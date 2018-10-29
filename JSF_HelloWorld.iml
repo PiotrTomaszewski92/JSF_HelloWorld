@@ -22,10 +22,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: org.primefaces:primefaces:6.2" level="project" />
-    <orderEntry type="library" name="Maven: com.sun.faces:jsf-api:2.1.11" level="project" />
-    <orderEntry type="library" name="Maven: com.sun.faces:jsf-impl:2.1.11" level="project" />
-    <orderEntry type="library" name="Maven: javax.servlet:jstl:1.2" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.faces:jsf-api:2.2.6" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.faces:jsf-impl:2.2.6" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet.jsp:jsp-api:2.1" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.web:el-impl:2.2" level="project" />
