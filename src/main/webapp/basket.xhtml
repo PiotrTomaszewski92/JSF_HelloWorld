@@ -1,0 +1,45 @@
+<ui:composition template="template.xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:H="http://java.sun.com/jsf/html"
+                xmlns:F="http://java.sun.com/jsf/core">
+
+    <ui:define name="Container">
+        <h2>Your order</h2>
+
+        <h:form>
+            <h:dataTable>
+                <h:column>
+                    <f:facet name="header">Nazwa</f:facet>
+                    <h:outputText value="Procesor Quad" />
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Cena</f:facet>
+                    <h:outputText value="Cena" />
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Ilość</f:facet>
+                    <h:inputText value="1" size="3" />
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Przelicz</f:facet>
+                    <h:commandButton value="Przelicz" />
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Usuń</f:facet>
+                    <h:commandButton value="Usuń" />
+                </h:column>
+            </h:dataTable>
+
+            <h:commandButton value="Do kasy" />
+
+        </h:form>
+
+
+    </ui:define>
+</ui:composition>
+
