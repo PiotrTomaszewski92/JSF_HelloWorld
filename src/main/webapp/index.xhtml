@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="helloWorld.xhtml">
+
+    <ui:define name="Container">
+        <h3>Welcome on our website</h3>
+        <h:panelGrid columnClasses="komorka">
+
+            <h:panelGroup>
+                <h4>Your items</h4>
+                <h:commandLink value="Show" />
+                <h4>Choose product</h4>
+                <h:selectOneMenu>
+                    <f:selectItem itemLabel="Procesor Quad" itemValue="procesor_quad" />
+                    <f:selectItem itemLabel="Procesor Dual" itemValue="procesor_dual" />
+                    <f:selectItem itemLabel="Procesor 3" itemValue="procesor_3" />
+                    <f:selectItem itemLabel="Procesor 4" itemValue="procesor_4" />
+                    <f:selectItem itemLabel="Procesor 5" itemValue="procesor_5" />
+                </h:selectOneMenu>
+                <h:commandButton value="Go" />
+            </h:panelGroup>
+        </h:panelGrid>
+    </ui:define>
+</ui:composition>
+</html>
