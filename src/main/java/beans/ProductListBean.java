@@ -41,6 +41,8 @@ public class ProductListBean {
 
     public void setCategory(Category category) {
         this.category = category;
+        this.page = 0;
+        this.refreshModel();
     }
 
     public boolean isNext(){
@@ -50,6 +52,18 @@ public class ProductListBean {
 
     public boolean isPrevious(){
         return this.page > 0;
+    }
+
+    public String showPrevious(){
+        this.page--;
+        this.refreshModel();
+        return "";
+    }
+
+    public String showNext(){
+        this.page++;
+        this.refreshModel();
+        return "";
     }
 
 

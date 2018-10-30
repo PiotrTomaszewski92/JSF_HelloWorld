@@ -28,11 +28,11 @@
                 </h:column>
             </h:dataTable>
 
-            <h:commandLink rendered="#{productListBean.previous}" > (PREV) </h:commandLink>
-            <h:commandLink rendered="#{productListBean.next}" > (NEXT) </h:commandLink>
+            <h:commandLink rendered="#{productListBean.previous}" action="#{productListBean.showPrevious}"> (PREV) </h:commandLink>
+            <h:commandLink rendered="#{productListBean.next}" action="#{productListBean.showNext}"> (NEXT) </h:commandLink>
             <br />
-            <h:commandButton value="ADD" />
-            <h:commandButton value="BACK" />
+            <h:commandButton value="ADD" action="basket.xhtml"/>
+            <h:commandButton value="BACK" action="index.xhtml"/>
         </h:form>
 
 

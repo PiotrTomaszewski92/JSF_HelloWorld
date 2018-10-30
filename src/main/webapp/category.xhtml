@@ -13,7 +13,9 @@
         <ul>
             <ui:repeat value="#{categoryBean.categoryModel}" var="category">
                 <li>
-                    <h:commandLink value="#{category.name}" action="productList.xhtml"> </h:commandLink>
+                    <h:commandLink value="#{category.name}" action="productList.xhtml">
+                        <f:setPropertyActionListener value="#{category}" target="#{productListBean.category}" />
+                    </h:commandLink>
                 </li>
             </ui:repeat>
         </ul>
