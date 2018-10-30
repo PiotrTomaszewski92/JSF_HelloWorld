@@ -1,13 +1,17 @@
 <ui:composition template="template.xhtml"
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 xmlns:h="http://xmlns.jcp.org/jsf/html"
-                xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:H="http://java.sun.com/jsf/html"
-                xmlns:F="http://java.sun.com/jsf/core">
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <ui:define name="Container">
         <h2>Finish order</h2>
         <h:form>
             <h:panelGrid columns="2">
+
+                <h:outputText value="E-mail: " />
+                <h:inputText required="true" requiredMessage="E-mail field is required" value="#{basketBean.order.user.email}">
+                    <f:validator validatorId="emailValidator" />
+                </h:inputText>
 
                 <h:outputText value="Imię: " />
                 <h:inputText validatorMessage="Name is not correct" required="true" requiredMessage="Name field is required" value="#{basketBean.order.user.name}">
