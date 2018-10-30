@@ -11,7 +11,7 @@ import javax.faces.bean.SessionScoped;
 public class BasketBean {
     private Order order = new Order();
     private Component component;
-    
+
     public Order getOrder() {
         return order;
     }

@@ -10,7 +10,7 @@
 
         <h:form>
 
-            <h:dataTable id="productTable" value="#{productListBean.productModel}">
+            <h:dataTable id="productTable" value="#{productListBean.productModel}" var="product">
                 <h:column>
                     <F:facet name="header">Name</F:facet>
                     <h:outputLink  value="productDetail.xhtml">

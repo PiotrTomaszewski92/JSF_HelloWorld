@@ -6,24 +6,27 @@
 
     <ui:define name="Container">
         <h2>Finish order</h2>
+        <h:form>
+            <h:panelGrid columns="2">
 
-        <h:panelGrid columns="2">
+                <h:outputText value="Imię: " />
+                <h:inputText required="true" value="#{basketBean.order.user.name}">
+                    <f:validateLength minimum="2" maximum="20" />
+                </h:inputText>
 
-            <h:outputText value="Imię: " />
-            <h:inputText />
+                <h:outputText value="Nazwisko: " />
+                <h:inputText required="true" value="#{basketBean.order.user.surname}">
+                    <f:validateLength minimum="2" maximum="20" />
+                </h:inputText>
 
-            <h:outputText value="Nazwisko: " />
-            <h:inputText />
+                <h:outputText value="Adres: " />
+                <h:inputTextarea required="true" value="#{basketBean.order.user.address}"/>
 
-            <h:outputText value="Adres: " />
-            <h:inputTextarea />
-
-            <h:outputText value="" />
-            <h:commandButton value="Finalizuj" />
-
-
-
-        </h:panelGrid>
+                <h:outputText value="" />
+                <h:commandButton value="Finalizuj" />
+    
+            </h:panelGrid>
+        </h:form>
 
     </ui:define>
 </ui:composition>
