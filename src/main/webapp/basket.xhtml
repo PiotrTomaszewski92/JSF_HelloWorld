@@ -7,25 +7,25 @@
         <h2>Your order</h2>
 
         <h:form>
-            <h:dataTable value="#{basketBean.order.componentList}" var="component">
+            <h:dataTable value="#{basketBean.order.componentList}" var="comp">
                 <h:column>
                     <f:facet name="header">Nazwa</f:facet>
-                    <h:outputText value="#{component.product.name}" />
+                    <h:outputText value="#{comp.product.name}" />
                 </h:column>
 
                 <h:column>
                     <f:facet name="header">Cena</f:facet>
-                    <h:outputText value="#{component.product.price}" />
+                    <h:outputText value="#{comp.price}" />
                 </h:column>
 
                 <h:column>
                     <f:facet name="header">Ilość</f:facet>
-                    <h:inputText value="#{component.product.count}" size="3" />
+                    <h:inputText value="#{comp.count}" size="3" />
                 </h:column>
 
                 <h:column>
                     <f:facet name="header">Total</f:facet>
-                    <h:outputText id="total" value="#{component.total}"/>
+                    <h:outputText id="total" value="#{comp.total}"/>
                 </h:column>
 
                 <h:column>
