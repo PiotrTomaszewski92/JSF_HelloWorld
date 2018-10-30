@@ -8,7 +8,7 @@ public class Order {
     private int id;
     private Date date;
     private List<Component> componentList = new ArrayList<>();
-    private User user;
+    private User user = new User();
 
     public Order(){}
 
