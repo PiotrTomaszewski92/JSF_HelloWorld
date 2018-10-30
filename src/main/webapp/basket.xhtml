@@ -30,12 +30,16 @@
 
                 <h:column>
                     <f:facet name="header">Przelicz</f:facet>
-                    <h:commandButton value="Przelicz"  />
+                    <h:commandButton value="Przelicz">
+                        <f:setPropertyActionListener value="#{comp}" target="#{basketBean.component}"/>
+                    </h:commandButton>
                 </h:column>
 
                 <h:column>
                     <f:facet name="header">Usuń</f:facet>
-                    <h:commandButton value="Usuń" action="#{basketBean.remove}"/>
+                    <h:commandButton value="Usuń" action="#{basketBean.remove}">
+                        <f:setPropertyActionListener value="#{comp}" target="#{basketBean.component}"/>
+                    </h:commandButton>
                 </h:column>
             </h:dataTable>
 

@@ -7,6 +7,7 @@ import model.Product;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.event.ActionEvent;
 
 @ManagedBean
 @SessionScoped
@@ -67,4 +68,7 @@ public class BasketBean {
     }
 
 
+    public void actionListener(ActionEvent actionEvent) {
+
+    }
 }
