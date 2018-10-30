@@ -67,4 +67,8 @@ public class Component {
         result = 31 * result + (order != null ? order.hashCode() : 0);
         return result;
     }
+
+    public BigDecimal getTotal(){
+        return this.price.multiply(new BigDecimal(this.count));
+    }
 }
