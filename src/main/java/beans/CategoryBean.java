@@ -12,6 +12,11 @@ import javax.faces.model.ListDataModel;
 public class CategoryBean {
     private ListDataModel<Category> categoryModel = new ListDataModel<>();
 
+
+    public CategoryBean() {
+        categoryModel.setWrappedData(Dao.getDao().getCategoryList());
+    }
+
     public ListDataModel<Category> getCategoryModel() {
         return categoryModel;
     }
@@ -20,7 +25,4 @@ public class CategoryBean {
         this.categoryModel = categoryModel;
     }
 
-    public CategoryBean() {
-        categoryModel.setWrappedData(Dao.getDao().getCategoryList());
-    }
 }

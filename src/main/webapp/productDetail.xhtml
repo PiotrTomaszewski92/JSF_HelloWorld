@@ -5,17 +5,19 @@
                 xmlns:F="http://java.sun.com/jsf/core">
 
     <ui:define name="Container">
-        <h2>Procesor Quad</h2>
+        <h2><h:outputText value="#{productDetailBean.selectedProduct.name}"/></h2>
 
         <h:panelGrid columns="2" border="1">
             <h:outputText value="Price" />
             <h:outputFormat value="{0} zł" >
-                <f:param value="555,00" />
+                <f:param value="#{productDetailBean.selectedProduct.price}" />
             </h:outputFormat>
 
             <h:outputText value="Details"/>
-            <h:outputText value="Procesor specification" />
-
+            <h:outputText value="#{productDetailBean.selectedProduct.describe}" />
+            <h:commandButton value="Add">
+                <f:param name="productId" value="#{productDetailBean.selectedProduct.id}" />
+            </h:commandButton>
         </h:panelGrid>
 
 

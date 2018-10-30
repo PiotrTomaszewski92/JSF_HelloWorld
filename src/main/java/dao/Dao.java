@@ -24,10 +24,14 @@ public class Dao {
         categoryList.add(processor);
         categoryList.add(memory);
 
-        productList.add(new Product(1,"Processor Quad", new BigDecimal( 550), 10, processor ,"Example description"));
-        productList.add(new Product(2,"Processor Dual", new BigDecimal( 4400), 10, processor ,"Example description"));
-        productList.add(new Product(3,"Processor Single", new BigDecimal( 30), 10, processor ,"Example description"));
-        productList.add(new Product(4,"RAM 4GB", new BigDecimal( 350), 10, memory ,"Example description"));
+        Product p = new Product(1,"Processor Quad", new BigDecimal( 550), 10, processor ,"Example description");
+        productList.add(p);
+        p = new Product(2,"Processor Dual", new BigDecimal( 4400), 10, processor ,"Example description");
+        productList.add(p);
+        p = new Product(3,"Processor Single", new BigDecimal( 30), 10, processor ,"Example description");
+        productList.add(p);
+        p = new Product(4,"RAM 4GB", new BigDecimal( 350), 10, memory ,"Example description");
+        productList.add(p);
 
 
     }
