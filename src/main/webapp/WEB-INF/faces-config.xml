@@ -8,5 +8,10 @@
         <validator-id>emailValidator</validator-id>
         <validator-class>validators.EmailValidator</validator-class>
     </validator>
+
+    <converter>
+        <converter-id>ProductConverter</converter-id>
+        <converter-class>converters.ProductConverter</converter-class>
+    </converter>
   
 </faces-config>

@@ -16,7 +16,11 @@
 
                 <h4>Choose product</h4>
                 <h:selectOneMenu value="#{topProductsBean.choiceProduct}">
+
                     <f:selectItems  value="#{topProductsBean.topProducts}" />
+
+                    <f:converter converterId="ProductConverter" />
+
                 </h:selectOneMenu>
                 <h:commandButton value="Go" action="productDetail.xhtml"/>
             </h:panelGroup>
