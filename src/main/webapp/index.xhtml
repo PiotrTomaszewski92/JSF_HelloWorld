@@ -15,14 +15,10 @@
                 </h:form>
 
                 <h4>Choose product</h4>
-                <h:selectOneMenu>
-                    <f:selectItem itemLabel="Procesor Quad" itemValue="procesor_quad" />
-                    <f:selectItem itemLabel="Procesor Dual" itemValue="procesor_dual" />
-                    <f:selectItem itemLabel="Procesor 3" itemValue="procesor_3" />
-                    <f:selectItem itemLabel="Procesor 4" itemValue="procesor_4" />
-                    <f:selectItem itemLabel="Procesor 5" itemValue="procesor_5" />
+                <h:selectOneMenu value="#{topProductsBean.choiceProduct}">
+                    <f:selectItems  value="#{topProductsBean.topProducts}" />
                 </h:selectOneMenu>
-                <h:commandButton value="Go" />
+                <h:commandButton value="Go" action="productDetail.xhtml"/>
             </h:panelGroup>
         </h:panelGrid>
     </ui:define>
