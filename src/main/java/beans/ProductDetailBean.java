@@ -43,5 +43,8 @@ public class ProductDetailBean {
 
     public void setTopProductsBean(TopProductsBean topProductsBean) {
         this.topProductsBean = topProductsBean;
+        Product p = topProductsBean.getChoiceProduct();
+        if (p != null)
+            this.selectedProduct = p;
     }
 }

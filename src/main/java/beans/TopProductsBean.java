@@ -3,14 +3,14 @@ package beans;
 import dao.Dao;
 import model.Product;
 
-import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 import javax.faces.model.SelectItem;
 import java.util.ArrayList;
 import java.util.List;
 
 @ManagedBean
-@ApplicationScoped
+@SessionScoped
 public class TopProductsBean {
     private Product choiceProduct;
     private List<SelectItem> topProducts;
