@@ -16,6 +16,9 @@ public class ProductDetailBean {
     @ManagedProperty("#{param.id}")
     private int productId;
 
+    @ManagedProperty("#{topProductsBean}")
+    private TopProductsBean topProductsBean;
+
     public Product getSelectedProduct() {
         return selectedProduct;
     }
@@ -34,7 +37,11 @@ public class ProductDetailBean {
                 this.selectedProduct = dao.getProductById(productId);
     }
 
+    public TopProductsBean getTopProductsBean() {
+        return topProductsBean;
+    }
 
-
-
+    public void setTopProductsBean(TopProductsBean topProductsBean) {
+        this.topProductsBean = topProductsBean;
+    }
 }

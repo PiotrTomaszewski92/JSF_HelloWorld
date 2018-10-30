@@ -27,7 +27,7 @@
                 <h:inputTextarea required="true" requiredMessage="Address field is required" value="#{basketBean.order.user.address}"/>
 
                 <h:outputText value="" />
-                <h:commandButton value="Finalizuj" />
+                <h:commandButton value="Finalizuj" action="#{basketBean.finishOrder}" />
 
             </h:panelGrid>
         </h:form>
