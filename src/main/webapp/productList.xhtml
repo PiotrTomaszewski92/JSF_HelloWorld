@@ -1,8 +1,7 @@
 <ui:composition template="template.xhtml"
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 xmlns:h="http://xmlns.jcp.org/jsf/html"
-                xmlns:f="http://xmlns.jcp.org/jsf/core"
-                xmlns:F="http://java.sun.com/jsf/core">
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <ui:define name="Container">
         <h2 style="color:red;">Product list for #{productListBean.category.name}</h2>
@@ -12,19 +11,21 @@
 
             <h:dataTable id="productTable" value="#{productListBean.productModel}" var="product">
                 <h:column>
-                    <F:facet name="header">Name</F:facet>
+                    <f:facet name="header">Name</f:facet>
                     <h:outputLink  value="productDetail.xhtml">
                         <f:param name="id" value="#{product.id}" />
                         <h:outputText value="#{product.name}" />
                     </h:outputLink>
                 </h:column>
                 <h:column>
-                    <F:facet name="header">Price</F:facet>
+                    <f:facet name="header">Price</f:facet>
                     <h:outputFormat value="#{product.price}" />
                 </h:column>
                 <h:column>
                     <f:facet name="header">Dodaj</f:facet>
-                    <h:commandButton value="Dodaj" action="#{basketBean.addToBasket}"></h:commandButton>
+                    <h:commandButton value="Dodaj" action="#{basketBean.addToBasket}">
+                        <f:setPropertyActionListener value="#{product}" target="#{basketBean.selectedProduct}" ></f:setPropertyActionListener>
+                    </h:commandButton>
                 </h:column>
             </h:dataTable>
 
