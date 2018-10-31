@@ -51,6 +51,7 @@ public class BasketBean {
             if (c.equals(this.component)) {
                 order.getComponentList().remove(c);
                 break;
+
             }
         return "";
     }
