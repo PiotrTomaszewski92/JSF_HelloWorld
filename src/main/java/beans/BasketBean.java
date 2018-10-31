@@ -7,6 +7,7 @@ import model.Product;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 import javax.faces.event.ActionEvent;
 
 @ManagedBean
@@ -70,6 +71,8 @@ public class BasketBean {
 
 
     public void actionListener(ActionEvent actionEvent) {
-
+        String textId = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("productId");
+        int id = Integer.parseInt(textId);
+        this.selectedProduct = Dao.getDao().getProductById(id);
     }
 }

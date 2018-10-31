@@ -30,6 +30,10 @@ public class Dao {
         productList.add(p);
         p = new Product(3,"Processor Single", new BigDecimal( 30), 10, processor ,"Example description");
         productList.add(p);
+        p = new Product(4,"Processor ABC", new BigDecimal( 4400), 10, processor ,"Example description");
+        productList.add(p);
+        p = new Product(5,"Processor Trio", new BigDecimal( 30), 10, processor ,"Example description");
+        productList.add(p);
         p = new Product(4,"RAM 4GB", new BigDecimal( 350), 10, memory ,"Example description");
         productList.add(p);
 

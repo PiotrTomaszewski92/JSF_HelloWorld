@@ -1,6 +1,5 @@
 package model;
 
-import javafx.beans.property.StringProperty;
 
 import java.math.BigDecimal;
 
