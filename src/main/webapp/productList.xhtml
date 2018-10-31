@@ -22,8 +22,8 @@
                     <h:outputFormat value="#{product.price}" />
                 </h:column>
                 <h:column>
-                    <f:facet name="header">Dodaj</f:facet>
-                    <h:commandButton value="Dodaj" action="#{basketBean.addToBasket}">
+                    <f:facet name="header">Add</f:facet>
+                    <h:commandButton value="Add" action="#{basketBean.addToBasket}">
                         <f:setPropertyActionListener value="#{product}" target="#{basketBean.selectedProduct}" ></f:setPropertyActionListener>
                     </h:commandButton>
                 </h:column>
@@ -32,8 +32,8 @@
             <h:commandLink rendered="#{productListBean.previous}" action="#{productListBean.showPrevious}"> (PREV) </h:commandLink>
             <h:commandLink rendered="#{productListBean.next}" action="#{productListBean.showNext}"> (NEXT) </h:commandLink>
             <br />
-            <h:commandButton value="ADD" action="basket.xhtml"/>
-            <h:commandButton value="BACK" action="index.xhtml"/>
+            <h:commandButton value="BASKET" action="basket.xhtml"/>
+            <h:commandButton value="BACK TO MAIN" action="index.xhtml"/>
         </h:form>
 
 

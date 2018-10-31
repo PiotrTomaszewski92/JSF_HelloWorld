@@ -13,21 +13,21 @@
                     <f:validator validatorId="emailValidator" />
                 </h:inputText>
 
-                <h:outputText value="Imię: " />
+                <h:outputText value="Name: " />
                 <h:inputText validatorMessage="Name is not correct" required="true" requiredMessage="Name field is required" value="#{basketBean.order.user.name}">
                     <f:validateLength minimum="2" maximum="20" />
                 </h:inputText>
 
-                <h:outputText value="Nazwisko: " />
+                <h:outputText value="Surname: " />
                 <h:inputText validatorMessage="Surname is not correct" required="true" requiredMessage="Surname field is required" value="#{basketBean.order.user.surname}">
                     <f:validateLength minimum="2" maximum="20" />
                 </h:inputText>
 
-                <h:outputText value="Adres: " />
+                <h:outputText value="Address: " />
                 <h:inputTextarea required="true" requiredMessage="Address field is required" value="#{basketBean.order.user.address}"/>
 
                 <h:outputText value="" />
-                <h:commandButton value="Finalizuj" action="#{basketBean.finishOrder}" />
+                <h:commandButton value="BUY!" action="#{basketBean.finishOrder}" />
 
             </h:panelGrid>
         </h:form>

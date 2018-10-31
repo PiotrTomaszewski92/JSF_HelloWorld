@@ -9,17 +9,17 @@
         <h:form>
             <h:dataTable value="#{basketBean.order.componentList}" var="comp">
                 <h:column>
-                    <f:facet name="header">Nazwa</f:facet>
+                    <f:facet name="header">Name</f:facet>
                     <h:outputText value="#{comp.product.name}" />
                 </h:column>
 
                 <h:column>
-                    <f:facet name="header">Cena</f:facet>
+                    <f:facet name="header">Price</f:facet>
                     <h:outputText value="#{comp.price}" />
                 </h:column>
 
                 <h:column>
-                    <f:facet name="header">Ilość</f:facet>
+                    <f:facet name="header">Count</f:facet>
                     <h:inputText value="#{comp.count}" size="3" />
                 </h:column>
 
@@ -29,21 +29,21 @@
                 </h:column>
 
                 <h:column>
-                    <f:facet name="header">Przelicz</f:facet>
-                    <h:commandButton value="Przelicz">
+                    <f:facet name="header">Convert</f:facet>
+                    <h:commandButton value="Convert">
                         <f:setPropertyActionListener value="#{comp}" target="#{basketBean.component}"/>
                     </h:commandButton>
                 </h:column>
 
                 <h:column>
-                    <f:facet name="header">Usuń</f:facet>
-                    <h:commandButton value="Usuń" action="#{basketBean.remove}">
+                    <f:facet name="header">Delete</f:facet>
+                    <h:commandButton value="Delete" action="#{basketBean.remove}">
                         <f:setPropertyActionListener value="#{comp}" target="#{basketBean.component}"/>
                     </h:commandButton>
                 </h:column>
             </h:dataTable>
 
-            <h:commandButton value="Finish" action="finish"/>
+            <h:commandButton value="Finish " action="finish"/>
 
         </h:form>
 
