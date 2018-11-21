@@ -4,34 +4,34 @@ import java.math.BigDecimal;
 
 public class Component {
 
-    private int count;
-    private BigDecimal price;
+    private int amount;
+    private BigDecimal actualPrice;
     private Product product;
     private Order order;
 
     public Component() {}
 
-    public Component(int count, BigDecimal price, Product product, Order order) {
-        this.count = count;
-        this.price = price;
+    public Component(int amount, BigDecimal actualPrice, Product product, Order order) {
+        this.amount = amount;
+        this.actualPrice = actualPrice;
         this.product = product;
         this.order = order;
     }
 
-    public int getCount() {
-        return count;
+    public int getAmount() {
+        return amount;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 
-    public BigDecimal getPrice() {
-        return price;
+    public BigDecimal getActualPrice() {
+        return actualPrice;
     }
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
+    public void setActualPrice(BigDecimal actualPrice) {
+        this.actualPrice = actualPrice;
     }
 
     public Product getProduct() {
@@ -69,6 +69,6 @@ public class Component {
     }
 
     public BigDecimal getTotal(){
-        return this.price.multiply(new BigDecimal(this.count));
+        return this.actualPrice.multiply(new BigDecimal(this.amount));
     }
 }

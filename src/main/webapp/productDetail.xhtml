@@ -10,7 +10,7 @@
             <h:panelGrid columns="2" border="1">
                 <h:outputText value="Price" />
                 <h:outputFormat value="{0} zł" >
-                    <f:param value="#{productDetailBean.selectedProduct.price}" />
+                    <f:param value="#{productDetailBean.selectedProduct.actualPrice}" />
                 </h:outputFormat>
 
                 <h:outputText value="Description"/>

@@ -6,18 +6,18 @@ import java.math.BigDecimal;
 public class Product {
     private int id;
     private String name;
-    private BigDecimal price;
-    private int count;
+    private BigDecimal actualPrice;
+    private int amount;
     private Category category;
     private String describe;
 
     public Product(){}
 
-    public Product(int id, String name, BigDecimal price, int count, Category category, String describe) {
+    public Product(int id, String name, BigDecimal actualPrice, int amount, Category category, String describe) {
         this.id = id;
         this.name = name;
-        this.price = price;
-        this.count = count;
+        this.actualPrice = actualPrice;
+        this.amount = amount;
         this.category = category;
         this.describe = describe;
     }
@@ -38,20 +38,20 @@ public class Product {
         this.name = name;
     }
 
-    public BigDecimal getPrice() {
-        return price;
+    public BigDecimal getActualPrice() {
+        return actualPrice;
     }
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
+    public void setActualPrice(BigDecimal actualPrice) {
+        this.actualPrice = actualPrice;
     }
 
-    public int getCount() {
-        return count;
+    public int getAmount() {
+        return amount;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 
     public Category getCategory() {

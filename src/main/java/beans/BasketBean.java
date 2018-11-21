@@ -60,11 +60,11 @@ public class BasketBean {
     public String addToBasket(){
         for (Component c : order.getComponentList()){
             if (c.getProduct().equals(selectedProduct)){
-                c.setCount(c.getCount()+1);
+                c.setAmount(c.getAmount()+1);
                 return "basket.xhtml";
             }
         }
-        Component c = new Component(1,selectedProduct.getPrice(), selectedProduct, order);
+        Component c = new Component(1,selectedProduct.getActualPrice(), selectedProduct, order);
         order.getComponentList().add(c);
         return "basket.xhtml";
     }
